@@ -1,0 +1,65 @@
+<article class="root">
+  <h3 style="text-align: center; color: blue">
+    EMPLOYEE DATA BASE WITH GRID DISPLAY
+  </h3>
+  <form
+    class="form-horizontal"
+    [formGroup]="form"
+    #loginForm="ngForm"
+    (ngSubmit)="onSubmit(loginForm)"
+  >
+    <igx-input-group>
+      <input igxInput name="fullName" type="text" formControlName="fullName" />
+      <label igxLabel for="fullName">Full Name</label> </igx-input-group
+    ><br />
+    <igx-input-group>
+      <igx-prefix>
+        <igx-icon>phone</igx-icon>
+      </igx-prefix>
+      <label igxLabel>Phone</label>
+      <input
+        igxInput
+        type="text"
+        name="phoneNumber"
+        formControlName="phoneNumber"
+        [igxMask]="'+(00) 0000000000'"
+      />
+    </igx-input-group>
+    <br />
+    <igx-select name="role" formControlName="role" #select>
+      <label igxLabel>Select Role</label>
+      <igx-select-item *ngFor="let item of items" [value]="item">
+        {{ item }}
+      </igx-select-item>
+    </igx-select>
+    <div class="wrapper">
+      <!-- <div class="button-sample">
+            <button igxButton="flat" igxRipple>Flat</button>
+        </div>
+        <div class="button-sample">
+            <button igxButton="raised" igxRipple>Raised</button>
+        </div> -->
+      <div class="button-sample">
+        <button igxButton="outlined" (click)="toast.open()" igxRipple>
+          CREATE
+        </button>
+        <igx-toast #toast>Data Created Successfully</igx-toast>
+      </div>
+    </div>
+  </form>
+</article>
+<div>
+  <div style="text-align: center; padding-left: 150px; padding-top: 100px">
+    <igx-grid
+      [data]="dataBase"
+      width="600px"
+      height="400px"
+      style="margin: auto"
+      [allowFiltering]="true"
+    >
+      <igx-column field="fullName" dataType="string"></igx-column>
+      <igx-column field="phoneNumber" dataType="string"></igx-column>
+      <igx-column field="role" dataType="string"></igx-column>
+    </igx-grid>
+  </div>
+</div>

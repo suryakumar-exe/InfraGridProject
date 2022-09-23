@@ -1,0 +1,69 @@
+.sample-column {
+  max-width: 550px;
+}
+.drop-down-virtual-wrapper {
+  overflow: hidden;
+  max-height: 240px;
+  width: 180px;
+}
+
+:host {
+  display: flex;
+  flex-flow: row;
+  margin: 8px;
+}
+
+.button {
+  width: 180px;
+}
+
+.selection {
+  line-height: 2.25rem;
+  padding: 0px 8px;
+}
+
+.igx-drop-down__item {
+  padding: 0 0.8rem;
+}
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.button-sample {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 30%;
+  margin: 16px 0;
+}
+.root {
+  --igx-primary-h: 204deg;
+  --igx-primary-s: 100%;
+  --igx-primary-l: 50%;
+  --igx-primary-a: 1;
+  --igx-primary-50: hsla(
+    var(--igx-primary-h),
+    calc(var(--igx-primary-s) * 1.23),
+    calc(var(--igx-primary-l) * 1.78),
+    var(--igx-primary-a)
+  );
+  --igx-primary-100: hsla(
+    var(--igx-primary-h),
+    calc(var(--igx-primary-s) / 1.25),
+    calc(var(--igx-primary-l) * 1.66),
+    var(--igx-primary-a)
+  );
+  --igx-primary-200: hsla(
+    var(--igx-primary-h),
+    calc(var(--igx-primary-s) * 0.64),
+    calc(var(--igx-primary-l) * 1.43),
+    var(--igx-primary-a)
+  );
+  // ...
+  --igx-primary-50-contrast: black;
+  --igx-primary-100-contrast: black;
+  --igx-primary-200-contrast: black;
+  // ...
+}
