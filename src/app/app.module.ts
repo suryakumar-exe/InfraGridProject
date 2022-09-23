@@ -8,7 +8,11 @@ import { GridFilterDataComponent } from './grid-filter-data/grid-filter-data.com
 import { SimpleFormComponent } from './simple-form/simple-form.component';
 import { IgxInputGroupModule, IgxToastModule } from 'igniteui-angular';
 import { FormsModule } from '@angular/forms';
-
+import {
+  IgxDialogModule,
+  IgxFocusModule,
+  IgxActionStripModule,
+} from 'igniteui-angular';
 import {
   IgxDropDownModule,
   IgxButtonModule,
@@ -39,6 +43,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     IgxToastModule,
+    IgxDialogModule,
+    IgxFocusModule,
+    IgxActionStripModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
